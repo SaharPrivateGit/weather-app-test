@@ -7,7 +7,7 @@ document.querySelector('#fetcher').addEventListener('click', (e)=>{
     initial.forEach((element)=>{
         element.style.display='none';
     })
-    fetch(`http://localhost:3000/weather?adress=${value}`).then((response) => {
+    fetch(`/weather?adress=${value}`).then((response) => {
         response.json().then((data) => {
             console.log(data);
             if (data.errorMessage) {
