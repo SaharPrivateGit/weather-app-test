@@ -40,3 +40,8 @@ header a {
 .portrait {
     width: 250px;
 }
+
+p{
+    line-height: 140%;
+    width: 65%;
+}
