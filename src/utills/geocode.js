@@ -7,9 +7,8 @@ const geoCode=(adress, callback)=>{
     request({url, json: true}, (err,{body})=>{
         if(err){
             callback('Low level error', undefined);
-        
-       /* else if(body.features.length===0){
-            callback('High level error', undefined);*/  
+        }else if(body.features.length===0){
+            callback('High level error', undefined);
         } else{
             console.log(body.features);
             const {center: coordinates}=body.features[0]
